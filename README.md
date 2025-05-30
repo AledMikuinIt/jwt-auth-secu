@@ -1,0 +1,38 @@
+# Backend Auth JWT avec Payload Encrypté, Rotation de Clés, et Rate Limiting
+
+Ce projet est un backend d’authentification complet construit avec Node.js, Express, MongoDB et Redis, qui utilise des tokens JWT sécurisés avec payload encrypté, gestion des rôles, blacklist de tokens, rotation des clés JWT et rate limiting.
+
+---
+
+## Fonctionnalités principales
+
+- **Inscription et connexion sécurisées** avec validation des données et gestion des erreurs
+- **JWT avec payload encrypté** pour protéger les données sensibles dans le token
+- **Gestion des rôles** (user/admin) pour sécuriser les accès aux routes
+- **Rotation des clés JWT** pour renforcer la sécurité des tokens
+- **Blacklist des tokens** pour gérer le logout et invalider les tokens
+- **Rate limiting** pour limiter le nombre de requêtes et éviter les abus
+- **Protection des routes privées** avec vérification du token et des droits d’accès
+- **Tests automatisés** couvrant tous les cas critiques (15 tests avec jest)
+- Utilisation de **Redis** pour la gestion des tokens blacklistés et du rate limiting
+- Connexion à **MongoDB** via Mongoose pour la gestion des utilisateurs
+
+---
+
+## Prérequis
+
+- Node.js (version 18+ recommandée)
+- MongoDB (accessible via URI)
+- Redis (pour gestion de blacklist et cache)
+- Un fichier `.env` configuré (voir plus bas)
+
+---
+
+## Installation
+
+1. Clonez ce repo :
+
+   git clone https://github.com/AledMikuinIt/node.git
+   cd node
+
+2. 
