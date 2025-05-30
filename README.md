@@ -62,3 +62,4 @@ Ce projet est un backend d’authentification complet construit avec Node.js, Ex
    npm run dev
    ```
 
+Note : Assurez-vous que vos variables .env sont correctement configurées, notamment les URI MongoDB et Redis ainsi que les secrets JWT avant de lancer l’application.
