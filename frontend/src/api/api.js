@@ -44,7 +44,7 @@ api.interceptors.response.use(
       isRefreshing = true;
 
       try {
-        const response = await api.post('/refresh'); // appelle ta route refresh
+        const response = await api.post('/refresh'); 
         const newAccessToken = response.data.accessToken;
 
         // Met à jour le header de la requête originale
