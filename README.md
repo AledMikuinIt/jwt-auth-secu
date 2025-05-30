@@ -42,10 +42,10 @@ Ce projet est un backend d’authentification complet construit avec Node.js, Ex
 
 3. Naviguez dans le frontend :
 
-  cd ../frontend
-  npm install vite
+   cd ../frontend
+   npm install vite
 
-4. Lancer l’application en mode développement :
+5. Lancer l’application en mode développement :
 
    Ouvrez deux terminals :
    
