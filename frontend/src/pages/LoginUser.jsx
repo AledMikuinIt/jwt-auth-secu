@@ -22,7 +22,7 @@ export default function LoginUser() {
 
 const handleSubmit = async (e) => {
   e.preventDefault();
-  const role = "user"; // ou récupérer depuis un select / input
+  const role = "user"; 
   await login(email, password, role);
 };
 
