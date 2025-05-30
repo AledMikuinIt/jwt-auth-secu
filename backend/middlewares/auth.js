@@ -36,7 +36,7 @@ export default async (req, res, next) => {
 
     // Passer la clé utilisée pour déchiffrer
     try {
-req.user = await decryptPayload(decoded.data, jwtKeys.derivedAccess); // ✅
+req.user = await decryptPayload(decoded.data, jwtKeys.derivedAccess); 
 
 } catch (err) {
   console.error('Erreur decryptPayload:', err);
