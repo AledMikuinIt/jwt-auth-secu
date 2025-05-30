@@ -21,7 +21,6 @@ beforeAll(async () => {
   app = await createApp;
   await redis.set('testkey', 'testvalue');
   const val = await redis.get('testkey');
-  console.log('Redis test value:', val); // doit afficher 'testvalue'
   await redis.flushall();
 
   await initDerivedKeys();
@@ -256,7 +255,5 @@ it('should accept old token after key rotation', async () => {
 
   expect(res.statusCode).toBe(200);
 });
-
-
-
+  
 });
