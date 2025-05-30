@@ -85,14 +85,13 @@ const logout = async (req, res) => {
 
     const isBlacklisted = await redis.get(`blacklist:${token}`);
     if (isBlacklisted) {
-      // Token déjà blacklisté → on considère le logout comme réussi
       return res.sendStatus(204);
     }
 
     // Vérification de la signature du token
     let decoded;
     try {
-      decoded = jwt.verify(token, jwtKeys.current); // Ajoute cette vérification
+      decoded = jwt.verify(token, jwtKeys.current); 
     } catch (err) {
       return res.status(403).json({ message: 'Token invalide' });
     }
@@ -129,7 +128,7 @@ const refresh = async (req, res) => {
 
   try {
     const decoded = jwt.verify(oldToken, jwtKeys.refresh); // clé brute
-    const decrypted = await decryptPayload(decoded.data, jwtKeys.derivedRefresh); // ✅
+    const decrypted = await decryptPayload(decoded.data, jwtKeys.derivedRefresh); 
     const userId = decrypted.id;
 
     const stored = await redis.get(`refresh:${userId}`);
@@ -140,8 +139,7 @@ const refresh = async (req, res) => {
     const user = await User.findById(userId);
     if (!user) return res.status(404).json({ message: 'Utilisateur non trouvé' });
 
-    const accessPayload = encryptPayload({ id: user.id, email: user.email }, jwtKeys.derivedAccess); // ✅
-
+    const accessPayload = encryptPayload({ id: user.id, email: user.email }, jwtKeys.derivedAccess); 
     const newAccessToken = jwt.sign(
       {
         data: accessPayload,
@@ -151,7 +149,7 @@ const refresh = async (req, res) => {
       { expiresIn: process.env.JWT_EXPIRES_IN || '1h' }
     );
 
-    const refreshPayload = encryptPayload({ id: userId }, jwtKeys.derivedRefresh); // ✅
+    const refreshPayload = encryptPayload({ id: userId }, jwtKeys.derivedRefresh); 
 
     const newRefreshToken = jwt.sign(
       { data: refreshPayload },
@@ -201,7 +199,7 @@ const decodeJWT = async (req, res) => {
     }
 
     // Initialise et récupère la clé dérivée avant décryptage
-    const decrypted = await decryptPayload(decoded.data, jwtKeys.derivedAccess); // ✅
+    const decrypted = await decryptPayload(decoded.data, jwtKeys.derivedAccess); 
     const user = await User.findById(decrypted.id).select('-password');
     if (!user) return res.status(404).json({ message: 'Utilisateur non trouvé' });
     res.json({ user });
@@ -211,10 +209,6 @@ const decodeJWT = async (req, res) => {
     res.status(403).json({ message: 'Invalid token' });
   }
 };
-
-
-
-
 
 
 export { register, login, logout, decodeJWT, refresh };
