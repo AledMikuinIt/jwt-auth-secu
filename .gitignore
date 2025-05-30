@@ -1,13 +1,33 @@
-# Node modules
+# Node modules (backend & frontend)
 node_modules/
 
 # Logs
 logs
 *.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
 
-# Env files
+# Env files (tu peux avoir .env dans backend et frontend)
 .env
+.env.local
+.env.*.local
 
-# Build output (si tu en as)
+# Build output (frontend vite)
 dist/
-build/
+
+# MacOS system files
+.DS_Store
+
+# IDEs & editors
+.vscode/
+.idea/
+*.sublime-workspace
+*.sublime-project
+
+# Jest coverage reports
+coverage/
+
+# Misc
+*.pem
+*.key
