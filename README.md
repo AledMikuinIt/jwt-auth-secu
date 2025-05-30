@@ -35,12 +35,12 @@ Ce projet est un backend d’authentification complet construit avec Node.js, Ex
    git clone https://github.com/AledMikuinIt/node.git
    cd node
 
-2. Naviguz dans le backend :
+3. Naviguz dans le backend :
 
    cd node/backend
    npm install
 
-3. Naviguez dans le frontend :
+4. Naviguez dans le frontend :
 
    cd ../frontend
    npm install vite
