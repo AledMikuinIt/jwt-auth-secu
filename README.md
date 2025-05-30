@@ -59,7 +59,6 @@ Ce projet est un backend d’authentification complet construit avec Node.js, Ex
    Dans le deuxième terminal, lancez le frontend :
    ```bash
    cd frontend
-   npm install
    npm run dev
    ```
 5. Lancement des tests :
