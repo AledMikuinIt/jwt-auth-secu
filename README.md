@@ -71,8 +71,10 @@ Ce projet est un backend d’authentification complet construit avec Node.js, Ex
 Note : Assurez-vous que vos variables .env sont correctement configurées, notamment les URI MongoDB et Redis ainsi que les secrets JWT avant de lancer l’application.
 
 ## Explication du fonctionnement
-![Texte alternatif](LoginRoute.drawio.png)
-
+# Route Login
+![Login](LoginRoute.drawio.png)
+# Route Dashboard
+![Login](MeRoute.drawio.png)
 ⚠️ Ce projet est un starter kit destiné aux développeurs expérimentés.
 Pour une mise en production sécurisée, une personnalisation adaptée à vos besoins, et un support professionnel, contactez-moi.
 📧 aledmikuin.it@gmail.com
