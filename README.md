@@ -83,5 +83,4 @@ Note : Assurez-vous que vos variables .env sont correctement configurées, notam
 
 ⚠️ Ce projet est un starter kit destiné aux développeurs expérimentés.
 
-Pour une mise en production sécurisée, une personnalisation adaptée à vos besoins, et un support professionnel, contactez-moi.
 📧 aledmikuin.it@gmail.com
